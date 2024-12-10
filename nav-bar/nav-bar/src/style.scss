@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f9;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border-bottom: 2px solid black;
+    backdrop-filter: blur(5px);
+    padding: 10px 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+}
+
+.navbar .logo {
+    color:#fff;
+    font-size: 50px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    color: rgb(82, 158, 86);
+    border-radius: 5px;
+    border-bottom: 2px solid green;
+}
+
+.nav-user li {
+    list-style: none;
+}
+
+.nav-user a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.nav-user a:hover {
+    color: rgb(82, 158, 86);
+    border-radius: 10px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.home-page {
+    background: linear-gradient(to right, rgba(255, 126, 95, 0.5), rgba(29, 26, 24, 0.5)), url(https://i.postimg.cc/rFJSsQvN/girl-8596582-1280.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.content {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+    .nav-links {
+        display: none;
+        gap: 15px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-user {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px; 
+    }
+    .nav-user.active {
+        display: flex;
+    }
+    .menu-btn {
+        display: block;
+        z-index: 1000;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+
